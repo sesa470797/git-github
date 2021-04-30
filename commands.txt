@@ -1,0 +1,15 @@
+echo "------<<SPACE>>------"
+df -kh
+echo "------<<Nginx status>>------"
+systemctl status nginx
+echo "------<<Tomcat status>>------"
+ps -ef | grep tomcat
+echo "------<<Close Wait Connection >>------"
+netstat -na | grep CLOSE_WAIT | wc -l
+echo "------<<Host Entry verify>>------"
+cat /etc/hosts
+echo "------<<Port listening >>------"
+netstat -plnt
+echo "------<<OpenDJ connection>>------"
+curl -i -H "Accept:application/json" -H "X-OpenIDM-Username:Directory Manager" -H "X-OpenIDM-Password:Passw0rd" https://secureidentity.schneider-electric.cn/opendj/Apps/AutomationHome --insecure
+echo "\n"

@@ -1,4 +1,4 @@
-echo "------<<SPACE>>------"
+echo "----------<<SPACE>>------------"
 df -kh
 echo "------<<Nginx status>>------"
 systemctl status nginx

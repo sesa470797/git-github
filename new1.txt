@@ -1,2 +1,5 @@
 ifconfig
 htop
+hello my world
+:wq!
+
